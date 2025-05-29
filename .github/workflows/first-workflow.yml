@@ -2,7 +2,7 @@ name: first workflow
 on: push
 jobs:
   build:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - name: build
         run: echo "build is done"
