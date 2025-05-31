@@ -1,0 +1,10 @@
+name: 5min workflow
+on:
+  schedule:
+    - cron: '5 * * * *'
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: schedule job
+        run: echo "this is scheduled run"
