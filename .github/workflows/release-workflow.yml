@@ -1,0 +1,10 @@
+name: on release
+on:
+  release:
+    type: published
+jobs:
+  release-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: release 
+        run: echo "a release was published"
