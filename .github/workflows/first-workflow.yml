@@ -1,8 +1,11 @@
-name: on push
-on: push
+name: on specific branch
+on: 
+  push:
+    branches:
+      - main
 jobs:
-  run-on-push:
+  push-main:
     runs-on: ubuntu-latest
     steps:
       - name: run on push
-        run: echo "push happend to this branch"
+        run: echo "push happend to this main branch"
