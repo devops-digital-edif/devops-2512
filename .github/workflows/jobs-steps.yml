@@ -1,5 +1,5 @@
 name: jobs & steps
-on: workflow_dispatch
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,5 +8,10 @@ jobs:
         run: echo "build started"
       - name: Checkout
         uses: actions/checkout@v4.2.2
-      - name: check the code
-        run: ls -a
+      - name: build status
+        run: echo "build completed"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing the artifacts
+        run: echo "testing is completed"
