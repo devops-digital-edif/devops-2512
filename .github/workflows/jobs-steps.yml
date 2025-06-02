@@ -15,3 +15,8 @@ jobs:
     steps:
       - name: testing the artifacts
         run: echo "testing is completed"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment
+        run: echo "deployment completed"
