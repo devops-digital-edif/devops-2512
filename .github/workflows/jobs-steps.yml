@@ -37,8 +37,16 @@ jobs:
       - name: testing the artifacts
         run: echo "testing is completed"
   deploy:
+    env:
+      DB_NAME: mydb
+      PORT: 5432
+      DB_USER: postgres
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: deployment
         run: echo "deployment completed"
+      - name: Connect Database
+        run: echo "connect database at $DB_NAME//$DB_USER@$DB_PASSWORD:$PORT "
+        env:
+          DB_PASSWORD: Admin123
