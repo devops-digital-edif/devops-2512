@@ -9,4 +9,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: check the code
-        run: cd devops-2512 && ls -a
+        run: ls -a
