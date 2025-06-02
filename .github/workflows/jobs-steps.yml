@@ -13,6 +13,12 @@ jobs:
         run: echo "$GREETINGS"
       - name: calling job specific variable
         run: echo "$WELCOME"
+      - name: calling step specific variable
+        run: echo "$TRAINER"
+        env:
+          TRAINER: "hello everyone myself Murali"
+      - name: calling step variable
+        run: echo "$TRAINER"
   build:
     runs-on: ubuntu-latest
     steps:
