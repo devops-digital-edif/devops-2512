@@ -1,6 +1,13 @@
 name: jobs & steps
-on: push
+on: workflow_dispatch
+env:
+  GREETINGS: "welcome to github actions"
 jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: calling variable
+        run: echo "$GREETINGS"
   build:
     runs-on: ubuntu-latest
     steps:
