@@ -1,7 +1,5 @@
 name: 5min workflow
-on:
-  schedule:
-    - cron: '5 * * * *'
+on: workflow_dispatch
 jobs:
   scheduled-job:
     runs-on: ubuntu-latest
