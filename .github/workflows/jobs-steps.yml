@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: build status
-        run: echo "build completed"
+        run: echo "$GREETINGS, build completed"
   test:
     runs-on: ubuntu-latest
     needs: build
