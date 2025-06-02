@@ -1,0 +1,12 @@
+name: jobs & steps
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build started
+        run: echo "build started"
+      - name: clone the code
+        run: git clone https://github.com/devops-digital-edif/devops-2512.git
+      - name: check the code
+        run: ls -a
