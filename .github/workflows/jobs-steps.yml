@@ -1,18 +1,25 @@
 name: jobs & steps
 on: workflow_dispatch
+# global variable
 env:
   GREETINGS: "welcome to github actions"
 jobs:
   greetings:
+    env:
+      WELCOME: "welcome to devops-2512"
     runs-on: ubuntu-latest
     steps:
       - name: calling variable
         run: echo "$GREETINGS"
+      - name: calling job specific variable
+        run: echo "$WELCOME"
   build:
     runs-on: ubuntu-latest
     steps:
       - name: build started
         run: echo "build started"
+      - name: calling job specific variable
+        run: echo "$WELCOME"
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: build status
