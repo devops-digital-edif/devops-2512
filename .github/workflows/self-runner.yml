@@ -2,10 +2,10 @@ name: self runner
 on: workflow_dispatch
 jobs:
   my-runner:
-    runs-on: myrunner
+    runs-on: build-runner
     steps:
-      - name: running on my runner
-        run: pwd
-      - name: create folder
-        run: mkdir my-folder
-      
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: list files
+        run: ls -a
+        
