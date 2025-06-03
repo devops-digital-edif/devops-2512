@@ -1,0 +1,11 @@
+name: self runner
+on: workflow_dispatch
+jobs:
+  my-runner:
+    runs-on: myrunner
+    steps:
+      - name: running on my runner
+        run: pwd
+      - name: create folder
+        run: mkdir my-folder
+      
